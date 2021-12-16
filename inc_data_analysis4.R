@@ -4,7 +4,7 @@ library(fastDummies)
 library(recipes)
 
 rm(list = ls())
-setwd("C:/Users/Lukas Grahl/Documents/r_project")
+setwd("C:/Users/Lukas Grahl/Documents/GIT/educ_wage")
 
 output_dir <- sprintf("%s/output", getwd())
 src_dir <- sprintf("%s/src", getwd())
