@@ -4,6 +4,12 @@ library(modelsummary)
 library(flextable)
 library(sandwich)
 
+init_project_root <- function(){
+  wd <- getwd()
+  setwd(getwd())
+  return(wd)
+}
+
 filter_df <- function(df){
   ## FILTERING
   x <- nrow(df)
