@@ -41,3 +41,7 @@ vignettes/*.pdf
 # Ignore directories
 output/
 data/
+
+#Ignore files
+.pdf
+.xlsx
