@@ -1,3 +1,3 @@
 # educ_wage
-# Educational effect on salary income
-Based on data from the 2011 CPS (Current Population Survey) in the United States several regression models have been estimated in order to qunatify the impact of educational level on salary income. The analysis has found positive influence of bachelor and master studies, yet masters are subject to diminishing marginal returns to education. This alligns with general findings in educational economics.
+# Educational effects on salary income
+Based on data from the 2011 United States CPS (Current Population Survey) several regression models have been estimated in order to qunatify the impact of educational level on salary income. In the US where university tutition is one of the highest world wide graduates face the especially tough decision of education investment. This project aims at undderlying this decision with emperical evidence. The analysis has found positive influence of bachelor and master studies, as well as diminishing marginal returns to education. This alligns with common findings in educational economics.
