@@ -43,6 +43,5 @@ output/
 data/
 
 #Ignore files
-.pdf
 .xlsx
 .png

@@ -2,10 +2,36 @@ library(readxl)
 library(tidyverse)
 library(corrr)
 library(tidyr)
+library(sjPlot)
+library(sjmisc)
+
+wd <- "C:/Users/Lukas Grahl/Documents/GIT/educ_wage"
+setwd(wd)
+data_dir <- sprintf("%s/data", wd)
 
 # LOAD DATA
-cali <- read_excel(path = "./r_project/data/california_schooling.xlsx")
+cali <- read_excel(path = sprintf("%s/california_schooling.xlsx", data_dir))
 # view(cali)
+
+cali$eps <- cali$expn_stu / 1000
+
+cali$str_large <- cali$str >= 20
+
+summary(cali$avginc)
+cali$is_low_avginc <- (cali$avginc <= quantile(cali$avginc, 0.25))
+
+x <- lm(testscr ~
+     expn_stu * log(avginc) + 
+     # is_low_avginc +
+     # str + 
+     str_large +
+     el_pct + 
+     meal_pct + 
+     log(avginc),
+   data = cali)
+summary(x)
+
+plot_model(x, type = "pred")# terms = c("expn_stu", "is_low_avginc"))
 
 # CHECK FOR MULTICOLINARIRTY
 # naive approach
