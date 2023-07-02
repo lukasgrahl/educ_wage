@@ -50,8 +50,8 @@ male_plot <- plot_inc_dist(df, sex_val = 1)
 female_plot
 male_plot
 
-ggsave(sprintf("%s/male_plot.png", output_dir), male_plot)
-ggsave(sprintf("%s/female_plot.png", output_dir), female_plot)
+# ggsave(sprintf("%s/male_plot.png", output_dir), male_plot)
+# ggsave(sprintf("%s/female_plot.png", output_dir), female_plot)
 
 ## FILTER
 filter <- TRUE
@@ -343,6 +343,7 @@ lm8 <- lm(log_wage ~
 )
 
 summary(lm8)
+plot(lm8)
 
 ## TABLE
 models <- list(
